@@ -219,5 +219,5 @@
     "on-scroll-down": "playerctl next"
     }
     // chmod +x ~/.config/waybar/custom_modules/player.sh
-
+    // You must have playerctl installed.
 }
