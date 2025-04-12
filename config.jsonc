@@ -210,7 +210,7 @@
             "default": ""
         }
     },
-    "custom:player": {
+    "custom/player": {
     "format": "{icon} {text}",
     "exec": "~/.config/waybar/custom_modules/player.sh",
     "interval": 2,
