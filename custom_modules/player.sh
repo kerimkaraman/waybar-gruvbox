@@ -1,12 +1,25 @@
 #!/bin/bash
 
+if ! playerctl -l | grep -q .; then
+  echo "⏹️ Hiçbir şey çalmıyor"
+  exit 0
+fi
+
+status=$(playerctl status 2>/dev/null)
+
+if [[ "$status" == "Stopped" ]]; then
+  echo "⏹️ Hiçbir şey çalmıyor"
+  exit 0
+fi
+
 artist=$(playerctl metadata artist)
 title=$(playerctl metadata title)
 
-icon="" 
-if [[ $(playerctl status) == "Playing" ]]; then
+icon=""
+if [[ "$status" == "Playing" ]]; then
   icon="▶️"
-elif [[ $(playerctl status) == "Paused" ]]; then
-  icon="⏸️"  
+elif [[ "$status" == "Paused" ]]; then
+  icon="⏸️"
 fi
+
 echo "$icon $artist - $title"
