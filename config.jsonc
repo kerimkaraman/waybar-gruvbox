@@ -8,7 +8,8 @@
     // Choose the order of the modules
     "modules-left": [
         "temperature",
-        "network"
+        "network",
+        "custom/player"
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -208,5 +209,12 @@
         "format-icons": {
             "default": ""
         }
+    },
+    "custom/player": {
+    "format": "🎵 {}",
+    "exec": "playerctl metadata --format '{{ artist }} - {{ title }}'",
+    "interval": 2,
+    "on-click": "playerctl play-pause"
     }
+
 }
