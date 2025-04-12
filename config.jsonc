@@ -215,8 +215,8 @@
     "exec": "~/.config/waybar/custom_modules/player.sh",
     "interval": 2,
     "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous"
+    "on-scroll-up": "playerctl previous",
+    "on-scroll-down": "playerctl next"
     }
     // chmod +x ~/.config/waybar/custom_modules/player.sh
 
