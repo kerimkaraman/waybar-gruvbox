@@ -210,11 +210,14 @@
             "default": ""
         }
     },
-    "custom/player": {
-    "format": "🎵 {}",
-    "exec": "playerctl metadata --format '{{ artist }} - {{ title }}'",
+    "custom:player": {
+    "format": "{icon} {text}",
+    "exec": "~/.config/waybar/custom_modules/player.sh",
     "interval": 2,
-    "on-click": "playerctl play-pause"
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
     }
+    // chmod +x ~/.config/waybar/custom_modules/player.sh
 
 }
